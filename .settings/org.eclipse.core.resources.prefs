@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//source/blog/templatetags/tags_markdown.py=utf-8
+encoding//source/blog/views.py=utf-8
 encoding//source/server/settings/development.py=utf-8
+encoding//source/server/settings/development2.py=utf-8

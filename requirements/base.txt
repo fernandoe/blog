@@ -1,3 +1,4 @@
 git+https://github.com/django/django.git@1.6b2
 django-extensions==1.2.0
 MySQL-python==1.2.4
+Markdown==2.3.1

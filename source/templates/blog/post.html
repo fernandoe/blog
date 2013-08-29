@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% load tags_markdown %}
+
+{% block content %}
+
+<div class="container">
+  <h2>{{object.title}}</h2>
+
+  <p>
+    {{object.content|markdown}}
+  </p>
+</div>
+
+
+{% endblock %}
