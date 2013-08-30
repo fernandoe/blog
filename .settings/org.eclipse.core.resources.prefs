@@ -1,5 +1,9 @@
 eclipse.preferences.version=1
+encoding//fabric_knife/deploy.py=utf-8
+encoding//fabric_knife/dreamhost.py=utf-8
 encoding//source/blog/templatetags/tags_markdown.py=utf-8
 encoding//source/blog/views.py=utf-8
 encoding//source/server/settings/development.py=utf-8
 encoding//source/server/settings/development2.py=utf-8
+encoding//source/server/settings/production.py=utf-8
+encoding/fabfile.py=utf-8
