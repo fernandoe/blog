@@ -64,6 +64,7 @@ def symlink_current_release():
     run("rm %(app_link)s" % env, quiet=True)
     with cd("~"):
         run('ln -s ~/releases/%(tag)s %(app_link)s' % env)
+        run('ln -s ~/.htaccess %(app_link)s/.htaccess' % env)
 
 
 def install_requirements():
@@ -79,7 +80,7 @@ def database_migrate():
 
 def collectstatic():
     require('django_settings', provided_by=[dh])
-    with cd("~/queropagar.com.br/source"):
+    with cd("%(app_link)s/source" % env):
         run("python manage.py collectstatic --noinput --settings=%(django_settings)s" % env)
 
 

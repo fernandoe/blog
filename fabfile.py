@@ -19,7 +19,7 @@ def dh():
 
     env.git_repo        = 'git@github.com:fernandoe/blog.git'
     env.git_clone_path  = "~/blog.git"
-    env.django_settings = 'server.settings.producao'
+    env.django_settings = 'server.settings.production'
     env.app_link        = '~/espindola.info'
 
 #     env.tag = "2013.08.27_22.26"
