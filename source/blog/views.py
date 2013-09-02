@@ -1,19 +1,22 @@
 # -*- coding:utf-8 -*-
-from blog.models import Post
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 
+from blog.models import Post
 
 
-class BlogView(ListView):
+class BlogListView(ListView):
     model = Post
     template_name = "blog/blog.html"
 
     def get_context_data(self, **kwargs):
-        context = super(BlogView, self).get_context_data(**kwargs)
+        context = super(BlogListView, self).get_context_data(**kwargs)
         context['menu'] = 'blog' 
         return context
+
+    def get_queryset(self):
+        return Post.objects.filter(published=True)
 
 
 class PostTemplateView(DetailView):
