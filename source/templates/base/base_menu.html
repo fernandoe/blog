@@ -50,19 +50,9 @@
           <div class="well sidebar-nav">
             <ul class="nav">
               <li>Categorias</li>
-
-<!-- 
-              <li class="active"><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li>Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li>Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
- -->
+              {% for category in categories %}
+              <li><a href="{% url 'blog'%}?category={{category.name}}">{{category.name}} ({{category.post_set.count}})</a></li>
+              {% endfor %}
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
