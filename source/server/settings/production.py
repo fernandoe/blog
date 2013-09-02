@@ -10,6 +10,8 @@ db_user     = os.environ.get('DB_USER')
 db_password = os.environ.get('DB_PASSWORD')
 db_host     = os.environ.get('DB_HOST')
 
+DEBUG = False
+TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = [
     '.espindola.info'
 ]

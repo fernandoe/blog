@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 from django import template
+from django.conf import settings
 from django.utils.safestring import mark_safe
 import markdown
 
@@ -10,9 +11,10 @@ register = template.Library()
 @register.filter(name='markdown')
 def blog_markdown(text):
     html = markdown.markdown(text)
-    print "=" * 100
-    print html
-    print "=" * 100
+    if settings.DEBUG:
+        print "=" * 100
+        print html
+        print "=" * 100
     return mark_safe(html)
 
 

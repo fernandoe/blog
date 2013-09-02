@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block css %}
+<link href="{% static 'blog/about.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-3">&nbsp;</div>
+  <div class="col-md-6">
+    <header>
+      <h1 class="text-center">Fernando Espíndola</h1>
+      <p>
+        <img src="{% static 'blog/fernandoe.jpg' %}" class="img-circle foto" align="left">
+        Gaúcho de Porto Alegre, pythonista por opção, empreendedor por paixão e dono e mantenedor do
+        serviço <a href="http://www.icandles.com.br">iCandles.</a>
+      </p>
+      <p>
+        O objetivo principal desse espaço é exercitar a escrita de alguns artigos, promovendo a 
+        pesquisa e desenvolvimento de sistema e um pouco de networking com a comunidade.
+      </p>
+    </header>
+
+    <article>
+       <p>
+        Trabalho na <a href="http://www.hp.com.br">HP</a> desde 2005 como desenvolvedor de sistemas 
+        ná área de pesquisa e desenvolvimento e gosto de fomentar práticas de qualidade de código 
+        como testes uniários, coberura de código e serviços de integração contínua. 
+      </p>
+
+      <p>
+        Meus contatos são: <br/>
+        Email: <a href="mailto:fer.esp@gmail.com">fer.esp@gmail.com</a><br/>
+        Twitter: <a href="http://www.twitter.com/feresp">@feresp</a><br/>
+      </p>
+
+      <p>
+        E como todo bom canceriano, amo demais minha família e esposa, uma mulher maravilhosa
+        que percorre esse caminho da vida comigo.
+      </p>
+
+      <img src="{% static 'blog/esposa.jpg' %}" alt="fernandoe" class="img-circle">
+    </article>
+  </div>
+  <div class="col-md-3">&nbsp;</div>
+</div>
+
+{% endblock %}
